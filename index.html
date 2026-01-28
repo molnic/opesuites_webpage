@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ope Suites | Santuario Urbano en Bogotá</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome (Icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* --- RESET & VARIABLES --- */
+        :root {
+            --bg-deep: #050505;
+            --bg-surface: #121212;
+            --bg-surface-hover: #1a1a1a;
+            --text-main: #e6e6e6;
+            --text-muted: #888888;
+            --accent: #d4af37;
+            --accent-glow: rgba(212, 175, 55, 0.2);
+            --border: rgba(255, 255, 255, 0.08);
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Plus Jakarta Sans', sans-serif;
+            --ease-out: cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-deep);
+            color: var(--text-main);
+            font-family: var(--font-sans);
+            font-size: 16px;
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            cursor: none; /* Custom cursor override */
+        }
+
+        /* --- UTILITIES --- */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .text-accent { color: var(--accent); }
+        .font-serif { font-family: var(--font-serif); }
+        .italic { font-style: italic; }
+        
+        a { text-decoration: none; color: inherit; transition: color 0.3s ease; }
+        
+        /* Noise Texture for "Film Grain" look */
+        .noise-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        /* --- CUSTOM CURSOR --- */
+        .cursor {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            border: 1px solid var(--text-main);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 10000;
+            transform: translate(-50%, -50%);
+            transition: width 0.3s, height 0.3s, background-color 0.3s;
+            mix-blend-mode: difference;
+        }
+        
+        .cursor.hovered {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-color: transparent;
+            backdrop-filter: blur(2px);
+        }
+
+        /* --- ANIMATIONS --- */
+        .reveal-text {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+        }
+
+        .reveal-text.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- NAVIGATION --- */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 2rem 0;
+            z-index: 100;
+            transition: background 0.3s ease, padding 0.3s ease;
+        }
+
+        nav.scrolled {
+            background: rgba(5, 5, 5, 0.85);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: var(--text-main);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-item {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .nav-item:hover { color: var(--text-main); }
+
+        .btn-reserve {
+            padding: 0.8rem 1.5rem;
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--text-main);
+            font-family: var(--font-sans);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: all 0.4s var(--ease-out);
+        }
+
+        .btn-reserve:hover {
+            background: var(--text-main);
+            color: var(--bg-deep);
+            border-color: var(--text-main);
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: url('https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=2580&auto=format&fit=crop') no-repeat center center/cover;
+            opacity: 0.3;
+            transform: scale(1.1);
+            transition: transform 10s ease;
+            z-index: -1;
+        }
+        
+        .hero:hover .hero-bg {
+            transform: scale(1);
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        h1 {
+            font-family: var(--font-serif);
+            font-size: clamp(3rem, 8vw, 6rem);
+            line-height: 1.1;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .hero-sub {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 450px;
+            margin-bottom: 3rem;
+            border-left: 1px solid var(--accent);
+            padding-left: 1.5rem;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            opacity: 0.5;
+        }
+
+        .line {
+            width: 1px;
+            height: 60px;
+            background: linear-gradient(to bottom, var(--text-main), transparent);
+        }
+
+        /* --- PROBLEM/SOLUTION (Narrative) --- */
+        .narrative {
+            padding: 10rem 0;
+            background: var(--bg-deep);
+        }
+
+        .narrative-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .narrative-text h2 {
+            font-family: var(--font-serif);
+            font-size: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .narrative-text p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .stat-row {
+            display: flex;
+            gap: 3rem;
+            margin-top: 3rem;
+            border-top: 1px solid var(--border);
+            padding-top: 2rem;
+        }
+
+        .stat-item h3 {
+            font-size: 2.5rem;
+            color: var(--accent);
+            font-family: var(--font-serif);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-item span {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+        }
+
+        /* --- LOCATIONS (Bento Grid) --- */
+        .locations {
+            padding: 5rem 0 10rem;
+        }
+
+        .section-header {
+            margin-bottom: 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+        }
+
+        .section-title {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+        }
+
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-auto-rows: minmax(300px, auto);
+            gap: 1.5rem;
+        }
+
+        .bento-item {
+            background: var(--bg-surface);
+            border: 1px solid var(--border);
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.4s var(--ease-out);
+            position: relative;
+            overflow: hidden;
+            group: cursor-hover;
+        }
+
+        .bento-item:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px -10px rgba(0,0,0,0.5);
+        }
+
+        .bento-img {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            object-fit: cover;
+            opacity: 0.4;
+            transition: opacity 0.4s ease, transform 0.6s ease;
+            z-index: 0;
+            filter: grayscale(100%);
+        }
+
+        .bento-item:hover .bento-img {
+            opacity: 0.6;
+            transform: scale(1.05);
+            filter: grayscale(0%);
+        }
+
+        .bento-content {
+            position: relative;
+            z-index: 2;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Specific Bento Items */
+        .item-calle100 {
+            grid-column: span 7;
+            min-height: 500px;
+        }
+
+        .item-usaquen {
+            grid-column: span 5;
+            min-height: 500px;
+        }
+
+        .item-feature-1 { grid-column: span 4; }
+        .item-feature-2 { grid-column: span 4; }
+        .item-feature-3 { grid-column: span 4; }
+
+        .location-tag {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            background: rgba(0,0,0,0.6);
+            padding: 0.5rem 1rem;
+            align-self: flex-start;
+            border: 1px solid var(--border);
+            backdrop-filter: blur(5px);
+        }
+
+        .location-title {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .location-desc {
+            color: #ccc;
+            font-size: 0.95rem;
+            max-width: 80%;
+        }
+
+        .bento-icon {
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        /* --- AMENITIES & LONG STAY --- */
+        .amenities {
+            padding: 5rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            background: linear-gradient(to right, var(--bg-deep), var(--bg-surface));
+        }
+
+        .amenities-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .amenity {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            opacity: 0.6;
+            transition: opacity 0.3s;
+        }
+
+        .amenity:hover { opacity: 1; }
+        .amenity i { color: var(--accent); }
+
+        /* --- CTA SECTION --- */
+        .cta-section {
+            padding: 8rem 0;
+            text-align: center;
+        }
+
+        .cta-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border);
+            padding: 4rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .cta-card::before {
+            content: '';
+            position: absolute;
+            top: -1px; left: -1px; right: -1px; bottom: -1px;
+            border: 1px solid transparent;
+            background: linear-gradient(45deg, transparent, var(--accent), transparent) border-box;
+            -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0.3;
+        }
+
+        .btn-gold {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 1rem 3rem;
+            background: var(--accent);
+            color: #000;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 20px var(--accent-glow);
+        }
+        
+        /* --- FOOTER --- */
+        footer {
+            padding: 5rem 0 2rem;
+            border-top: 1px solid var(--border);
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-col h4 {
+            color: var(--text-main);
+            margin-bottom: 1.5rem;
+            font-family: var(--font-serif);
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 0.8rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .social-links a:hover { color: var(--accent); }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            font-size: 0.8rem;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 992px) {
+            .bento-grid { display: flex; flex-direction: column; }
+            .narrative-grid { grid-template-columns: 1fr; }
+            h1 { font-size: 3.5rem; }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links { display: none; } /* Simplified mobile nav */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Overlay Effects -->
+    <div class="noise-overlay"></div>
+    <div class="cursor"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-content">
+            <a href="#" class="logo reveal-text">Ope Suites.</a>
+            <ul class="nav-links reveal-text">
+                <li><a href="#suites" class="nav-item">Suites</a></li>
+                <li><a href="#experiencia" class="nav-item">Experiencia</a></li>
+                <li><a href="#contacto" class="nav-item">Contacto</a></li>
+            </ul>
+            <div class="reveal-text">
+                 <a href="https://hotels.cloudbeds.com/reservation/OBvFrZ" target="_blank" class="btn-reserve interactive">Reservar Ahora</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="reveal-text">
+                    Estancias de Lujo.<br>
+                    <span class="italic text-accent">Sentimiento de Hogar.</span>
+                </h1>
+                <div class="hero-sub reveal-text" style="transition-delay: 0.2s;">
+                    Apartaestudios totalmente equipados en las zonas más exclusivas de Bogotá. 
+                    Diseñados para ejecutivos y viajeros que exigen privacidad.
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator reveal-text" style="transition-delay: 0.4s;">
+            <div class="line"></div>
+        </div>
+    </header>
+
+    <!-- Narrative Section -->
+    <section class="narrative" id="experiencia">
+        <div class="container">
+            <div class="narrative-grid">
+                <div class="narrative-text reveal-on-scroll">
+                    <h2>Más que un hotel,<br>tu <span class="italic text-accent">Santuario Urbano</span>.</h2>
+                    <p>Olvídate del caos impersonal de los hoteles tradicionales. En Ope Suites, entendemos que la verdadera exclusividad reside en la libertad.</p>
+                    <p>Ya sea por una noche de negocios o una estancia de meses, nuestros espacios en Calle 100 y Usaquén combinan la seguridad de un hotel con la autonomía de tu propio apartamento de lujo.</p>
+                    
+                    <div class="stat-row">
+                        <div class="stat-item">
+                            <h3>5.0</h3>
+                            <span>Estrellas en TripAdvisor</span>
+                        </div>
+                        <div class="stat-item">
+                            <h3>2</h3>
+                            <span>Ubicaciones Prime</span>
+                        </div>
+                        <div class="stat-item">
+                            <h3>∞</h3>
+                            <span>Privacidad</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="narrative-img reveal-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?q=80&w=2070&auto=format&fit=crop" alt="Interior de lujo Ope Suites" style="width: 100%; border: 1px solid var(--border); filter: grayscale(20%);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities Strip -->
+    <div class="amenities">
+        <div class="container">
+            <div class="amenities-list">
+                <div class="amenity"><i class="fas fa-wifi"></i> WiFi Alta Velocidad</div>
+                <div class="amenity"><i class="fas fa-couch"></i> Mobiliario Premium</div>
+                <div class="amenity"><i class="fas fa-concierge-bell"></i> Conserjería</div>
+                <div class="amenity"><i class="fas fa-map-marker-alt"></i> Ubicación Estratégica</div>
+                <div class="amenity"><i class="fas fa-kitchen-set"></i> Cocina Equipada</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Locations Showcase (Bento Grid) -->
+    <section class="locations" id="suites">
+        <div class="container">
+            <div class="section-header reveal-on-scroll">
+                <h2 class="section-title">Nuestras Colecciones</h2>
+                <p class="text-accent italic">Diseñado para la vida moderna</p>
+            </div>
+
+            <div class="bento-grid">
+                <!-- Calle 100 -->
+                <a href="https://opesuites.com/calle-100/" class="bento-item item-calle100 interactive reveal-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1554995207-c18c203602cb?q=80&w=2670&auto=format&fit=crop" class="bento-img" alt="Calle 100">
+                    <div class="bento-content">
+                        <span class="location-tag">Business District</span>
+                        <div>
+                            <h3 class="location-title">Sede Calle 100</h3>
+                            <p class="location-desc">El epicentro de los negocios en Bogotá. Av. Calle 100 # 23-44. Conectividad total y diseño sobrio.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Usaquén -->
+                <a href="https://opesuites.com/calle-119/" class="bento-item item-usaquen interactive reveal-on-scroll" style="transition-delay: 0.1s;">
+                    <img src="https://images.unsplash.com/photo-1505691723518-36a5ac3be353?q=80&w=2670&auto=format&fit=crop" class="bento-img" alt="Usaquén">
+                    <div class="bento-content">
+                        <span class="location-tag">Lifestyle & Culture</span>
+                        <div>
+                            <h3 class="location-title">Sede Usaquén</h3>
+                            <p class="location-desc">Cra 5 # 119-11. Gastronomía, cultura y calles empedradas a pasos de tu suite.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Feature 1 -->
+                <div class="bento-item item-feature-1 reveal-on-scroll">
+                    <div class="bento-content">
+                        <i class="fas fa-clock bento-icon"></i>
+                        <h4>Estadías Largas</h4>
+                        <p class="text-muted" style="font-size: 0.9rem; margin-top: 1rem;">Tarifas preferenciales para estancias mensuales. Siéntete en casa, por más tiempo.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bento-item item-feature-2 reveal-on-scroll" style="transition-delay: 0.1s;">
+                    <div class="bento-content">
+                        <i class="fas fa-shield-alt bento-icon"></i>
+                        <h4>Seguridad 24/7</h4>
+                        <p class="text-muted" style="font-size: 0.9rem; margin-top: 1rem;">Monitoreo constante y acceso controlado para tu tranquilidad total.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bento-item item-feature-3 reveal-on-scroll" style="transition-delay: 0.2s;">
+                    <div class="bento-content">
+                        <i class="fas fa-city bento-icon"></i>
+                        <h4>Vistas de la Ciudad</h4>
+                        <p class="text-muted" style="font-size: 0.9rem; margin-top: 1rem;">Grandes ventanales que integran el paisaje urbano de Bogotá a tu espacio.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conversion CTA -->
+    <section class="cta-section" id="contacto">
+        <div class="container">
+            <div class="cta-card reveal-on-scroll">
+                <h2 class="font-serif" style="font-size: 2.5rem; margin-bottom: 1rem;">¿Planeando una estancia larga?</h2>
+                <p class="text-muted" style="max-width: 600px; margin: 0 auto 2rem;">Ofrecemos tarifas corporativas y descuentos exclusivos para nómadas digitales y ejecutivos en estancias superiores a 30 días.</p>
+                
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="https://api.whatsapp.com/send?phone=573102735824" target="_blank" class="btn-gold interactive">
+                        <i class="fab fa-whatsapp" style="margin-right: 8px;"></i> Hablar por WhatsApp
+                    </a>
+                    <a href="mailto:reservas@opesuites.com" class="btn-reserve interactive">
+                        Enviar Email
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4 class="logo">Ope Suites.</h4>
+                    <p style="margin-bottom: 1rem;">Redefiniendo la hospitalidad en Bogotá.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/opesuitescol" target="_blank" class="interactive"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@ope.suites" target="_blank" class="interactive"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Ubicaciones</h4>
+                    <ul>
+                        <li><a href="https://goo.gl/maps/BzXyonDDW6oYJv9w7" target="_blank" class="interactive">Sede Calle 100</a></li>
+                        <li><a href="https://goo.gl/maps/UcyNHouBZQx9xDFs6" target="_blank" class="interactive">Sede Usaquén</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li>+57 310 273 5824</li>
+                        <li>reservas@opesuites.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2024 Ope Suites. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- Custom Cursor Logic ---
+        const cursor = document.querySelector('.cursor');
+        const interactiveElements = document.querySelectorAll('.interactive, a, button');
+
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        interactiveElements.forEach(el => {
+            el.addEventListener('mouseenter', () => cursor.classList.add('hovered'));
+            el.addEventListener('mouseleave', () => cursor.classList.remove('hovered'));
+        });
+
+        // --- Reveal Animations on Load ---
+        window.addEventListener('load', () => {
+            const reveals = document.querySelectorAll('.reveal-text');
+            reveals.forEach((el, index) => {
+                setTimeout(() => {
+                    el.classList.add('visible');
+                }, 100 * index);
+            });
+        });
+
+        // --- Intersection Observer for Scroll Animations ---
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.8s cubic-bezier(0.215, 0.61, 0.355, 1), transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1)';
+            observer.observe(el);
+        });
+
+        // --- Navbar Scroll Effect ---
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
