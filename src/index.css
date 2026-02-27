@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-bg-deep text-text-main font-sans text-base leading-relaxed overflow-x-hidden antialiased;
+  }
+
+  a {
+    @apply no-underline text-inherit transition-colors duration-300 ease-in-out;
+  }
+}
+
+@layer utilities {
+  .noise-overlay {
+    @apply fixed top-0 left-0 w-full h-full pointer-events-none z-[9999];
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+  }
+
+  .cursor-dot {
+    @apply fixed w-[20px] h-[20px] border border-text-main rounded-full pointer-events-none z-[10000] -translate-x-1/2 -translate-y-1/2 transition-all duration-300 mix-blend-difference top-0 left-0;
+  }
+
+  .cursor-dot.hovered {
+    @apply w-[50px] h-[50px] bg-white/10 border-transparent shadow-[0_4px_30px_rgba(0, 0, 0, 0.1)];
+    backdrop-filter: blur(2px);
+  }
+}
+
+/* Base styles for scroll behaviors to replace manual intersection observer logic when combined with custom hook */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.215, 0.61, 0.355, 1), transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.reveal-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
