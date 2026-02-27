@@ -13,7 +13,7 @@ const locationDetails = {
             'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=2000&auto=format&fit=crop', // Luxury apt view
             'https://images.unsplash.com/photo-1593642632823-8f785ba67e45?q=80&w=2000&auto=format&fit=crop', // Home office desk
         ],
-        bookingLink: 'http://localhost:8080/?sede=calle-100',
+        bookingLink: 'https://reservas.molnic.com/?sede=calle-100',
         amenities: [
             { icon: 'Dumbbell', label: 'Gym', description: 'Alto Rendimiento - 24/7' },
             { icon: 'Laptop', label: 'Coworking Space', description: 'Productividad Total' },
@@ -32,7 +32,7 @@ const locationDetails = {
             'https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=2000&auto=format&fit=crop', // Dining
             'https://images.unsplash.com/photo-1542314831-c6a4d14d2303?q=80&w=2000&auto=format&fit=crop', // Premium bedroom
         ],
-        bookingLink: 'http://localhost:8080/?sede=usaquen',
+        bookingLink: 'https://reservas.molnic.com/?sede=usaquen',
         amenities: [
             { icon: 'Utensils', label: 'Alta Gastronomía', description: 'A pasos de tu puerta' },
             { icon: 'Landmark', label: 'Arquitectura Colonial', description: 'Encanto y Cultura' },
