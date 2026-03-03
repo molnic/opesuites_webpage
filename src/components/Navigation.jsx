@@ -24,7 +24,7 @@ const Navigation = () => {
                     <img
                         src="/logo_opesuites_blanco.png"
                         alt="OPE Suites"
-                        className="h-8 md:h-10 lg:h-12 w-auto object-contain"
+                        className="h-14 md:h-20 lg:h-32 w-auto object-contain"
                     />
                 </a>
 
@@ -51,7 +51,7 @@ const Navigation = () => {
                         href="https://reservas.molnic.com/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-block py-3 px-6 bg-transparent border border-border text-text-main font-sans uppercase tracking-[0.1em] text-xs cursor-pointer interactive transition-all duration-400 ease-out-custom hover:bg-text-main hover:text-bg-deep hover:border-text-main"
+                        className="inline-block py-3 px-6 bg-accent text-white font-sans uppercase tracking-[0.1em] text-xs font-bold cursor-pointer interactive transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(212,175,55,0.4)]"
                     >
                         Reservar Ahora
                     </a>

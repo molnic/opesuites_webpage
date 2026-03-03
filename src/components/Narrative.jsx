@@ -32,13 +32,13 @@ const Narrative = () => {
                     {/* Text Content */}
                     <div className="reveal-on-scroll">
                         <h2 className="font-serif text-5xl mb-8">
-                            Más que un hotel,<br />tu <span className="italic text-accent">Santuario Urbano</span>.
+                            Más que un lugar para quedarte,<br />tu <span className="italic text-accent">Santuario Urbano</span>.
                         </h2>
                         <p className="text-text-muted mb-6 text-lg">
-                            Olvídate del caos impersonal de los hoteles tradicionales. En Ope Suites, entendemos que la verdadera exclusividad reside en la libertad.
+                            Olvídate de los espacios impersonales. En Ope Suites creemos que la verdadera exclusividad está en la libertad de sentirte en casa.
                         </p>
                         <p className="text-text-muted mb-6 text-lg">
-                            Ya sea por una noche de negocios o una estancia de meses, nuestros espacios en Calle 100 y Usaquén combinan la seguridad de un hotel con la autonomía de tu propio apartamento de lujo.
+                            Ya sea por una noche, una estadía corporativa o varios meses, nuestros apartamentos equipados y habitaciones privadas en Calle 100 y Usaquén combinan privacidad, practicidad y seguridad con la comodidad de tu propio espacio.
                         </p>
 
                         {/* Stats */}

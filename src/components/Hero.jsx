@@ -11,16 +11,27 @@ const Hero = () => {
             <div className="container max-w-[1400px] mx-auto px-8">
                 <div className="max-w-[800px]">
                     <h1 className="font-serif text-[clamp(3rem,8vw,6rem)] leading-[1.1] mb-8 font-normal reveal-on-scroll visible">
-                        Estancias de Lujo.<br />
-                        <span className="italic text-accent">Sentimiento de Hogar.</span>
+                        Tu Espacio en la Ciudad.<br />
+                        <span className="italic text-accent">Comodidad que se Siente como Hogar.</span>
                     </h1>
 
                     <div
                         className="text-[1.1rem] text-text-muted max-w-[450px] mb-12 border-l border-accent pl-6 reveal-on-scroll visible"
                         style={{ transitionDelay: '0.2s' }}
                     >
-                        Apartaestudios totalmente equipados en las zonas más exclusivas de Bogotá.
-                        Diseñados para ejecutivos y viajeros que exigen privacidad.
+                        Apartamentos totalmente equipados y habitaciones privadas en zonas estratégicas de Bogotá.<br />
+                        Diseñados para ejecutivos y viajeros que valoran privacidad, comodidad y ubicación.
+                    </div>
+
+                    <div className="reveal-on-scroll visible" style={{ transitionDelay: '0.3s' }}>
+                        <a
+                            href="https://reservas.molnic.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-block py-4 px-10 bg-accent text-white font-sans uppercase tracking-[0.1em] font-bold transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(212,175,55,0.4)]"
+                        >
+                            RESERVAR AHORA
+                        </a>
                     </div>
                 </div>
             </div>

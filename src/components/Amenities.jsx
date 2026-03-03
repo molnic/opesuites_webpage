@@ -9,17 +9,17 @@ const Amenities = () => {
 
                     <div className="flex items-center gap-4 opacity-60 hover:opacity-100 transition-opacity duration-300">
                         <Wifi className="text-accent" size={24} />
-                        <span>WiFi Alta Velocidad</span>
+                        <span>WiFi de Alta Velocidad</span>
                     </div>
 
                     <div className="flex items-center gap-4 opacity-60 hover:opacity-100 transition-opacity duration-300">
                         <Sofa className="text-accent" size={24} />
-                        <span>Mobiliario Premium</span>
+                        <span>Espacios Amoblados</span>
                     </div>
 
                     <div className="flex items-center gap-4 opacity-60 hover:opacity-100 transition-opacity duration-300">
                         <BellRing className="text-accent" size={24} />
-                        <span>Conserjería</span>
+                        <span>Atención Virtual o Presencial</span>
                     </div>
 
                     <div className="flex items-center gap-4 opacity-60 hover:opacity-100 transition-opacity duration-300">
@@ -28,8 +28,11 @@ const Amenities = () => {
                     </div>
 
                     <div className="flex items-center gap-4 opacity-60 hover:opacity-100 transition-opacity duration-300">
-                        <ChefHat className="text-accent" size={24} />
-                        <span>Cocina Equipada</span>
+                        <ChefHat className="text-accent shrink-0" size={24} />
+                        <span className="leading-tight text-left">
+                            Cocina Equipada<br />
+                            <span className="text-xs opacity-75 whitespace-nowrap">(según tipo de unidad)</span>
+                        </span>
                     </div>
 
                 </div>

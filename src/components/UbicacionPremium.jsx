@@ -52,10 +52,16 @@ const UbicacionPremium = () => {
 
                         <div className="flex flex-wrap gap-4 mt-8">
                             <span className="py-2 px-4 border border-gray-200 text-xs uppercase tracking-widest text-zinc-800 bg-white shadow-sm font-medium">
-                                Gastronomía Michelin
+                                Zona Financiera
                             </span>
                             <span className="py-2 px-4 border border-gray-200 text-xs uppercase tracking-widest text-zinc-800 bg-white shadow-sm font-medium">
-                                Distrito Financiero
+                                Centros de Salud
+                            </span>
+                            <span className="py-2 px-4 border border-gray-200 text-xs uppercase tracking-widest text-zinc-800 bg-white shadow-sm font-medium">
+                                Gastronomía y Cafés
+                            </span>
+                            <span className="py-2 px-4 border border-gray-200 text-xs uppercase tracking-widest text-zinc-800 bg-white shadow-sm font-medium">
+                                Comercio
                             </span>
                             <span className="py-2 px-4 border border-gray-200 text-xs uppercase tracking-widest text-zinc-800 bg-white shadow-sm font-medium">
                                 Entretenimiento
