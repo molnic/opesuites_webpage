@@ -3,16 +3,16 @@ import { ChevronDown } from 'lucide-react';
 
 const faqs = [
     {
-        question: "¿Cómo es la conexión a internet?",
-        answer: "Fibra óptica simétrica de alta velocidad en cada suite."
+        question: "¿Cuál es la hora de llegada y salida?",
+        answer: "Check-in a partir de las 2:00 pm, check-out hasta las 11:00 am."
     },
     {
         question: "¿Ofrecen servicios de limpieza?",
-        answer: "Sí, limpieza profesional programada para tu comodidad."
+        answer: "Contamos con servicio de limpieza disponible durante tu estadía, el cual puedes solicitar con un costo adicional. Para reservas de más de 8 días, incluimos un servicio de aseo cada 8 días sin costo adicional."
     },
     {
         question: "¿Es un espacio Pet-Friendly?",
-        answer: "Amamos a tus compañeros de vida; consulta nuestras políticas."
+        answer: "Para garantizar la comodidad de todos nuestros huéspedes, normalmente no admitimos mascotas. No obstante, en situaciones puntuales podemos evaluar el caso con anticipación. Escríbenos antes de reservar."
     },
     {
         question: "¿Hay parqueadero disponible?",

@@ -9,7 +9,7 @@ const Hero = () => {
             />
 
             <div className="container max-w-[1400px] mx-auto px-8">
-                <div className="max-w-[800px]">
+                <div className="max-w-[800px] pt-32 md:pt-40 lg:pt-48">
                     <h1 className="font-serif text-[clamp(3rem,8vw,6rem)] leading-[1.1] mb-8 font-normal reveal-on-scroll visible">
                         Tu Espacio en la Ciudad.<br />
                         <span className="italic text-accent">Comodidad que se Siente como Hogar.</span>
