@@ -52,7 +52,7 @@ export const CTA = () => {
     }, []);
 
     return (
-        <section className="py-32 text-center bg-zinc-50" id="contacto">
+        <section className="pt-16 pb-32 text-center bg-zinc-50" id="contacto">
             <div className="container max-w-[1400px] mx-auto px-8">
                 <div
                     ref={ctaRef}

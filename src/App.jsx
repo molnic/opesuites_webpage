@@ -9,6 +9,7 @@ import GaleriaEstiloVida from './components/GaleriaEstiloVida';
 import HistoriasHuespedes from './components/HistoriasHuespedes';
 import PreguntasFrecuentes from './components/PreguntasFrecuentes';
 import { CTA, Footer } from './components/FooterAndCTA';
+import WhatsAppButton from './components/WhatsAppButton';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <CTA />
       </main>
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 }

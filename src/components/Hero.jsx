@@ -12,7 +12,7 @@ const Hero = () => {
                 <div className="max-w-[800px] pt-32 md:pt-48 lg:pt-64 xl:pt-72">
                     <h1 className="font-serif text-[clamp(3rem,8vw,6rem)] leading-[1.1] mb-8 font-normal reveal-on-scroll visible">
                         Tu Espacio en la Ciudad.
-                        <span className="block text-3xl md:text-4xl lg:text-5xl mt-4 italic text-accent">Comodidad que se Siente como Hogar.</span>
+                        <span className="block text-3xl md:text-4xl lg:text-5xl mt-4 italic text-accent">Comodidad que se siente como Hogar.</span>
                     </h1>
 
                     <div

@@ -16,7 +16,7 @@ const faqs = [
     },
     {
         question: "¿Hay parqueadero disponible?",
-        answer: "Contamos con parqueadero privado y seguridad 24/7 en nuestra sede Calle 100."
+        answer: "Contamos con parqueadero con convenio y seguridad 24/7 en nuestra sede Calle 100."
     }
 ];
 
@@ -45,7 +45,7 @@ const PreguntasFrecuentes = () => {
     }, []);
 
     return (
-        <section className="py-24 bg-zinc-50 border-t border-gray-200" ref={sectionRef}>
+        <section className="pt-24 pb-12 bg-zinc-50 border-t border-gray-200" ref={sectionRef}>
             <div className="container max-w-[800px] mx-auto px-8">
 
                 <div className="text-center mb-16 reveal-on-scroll">

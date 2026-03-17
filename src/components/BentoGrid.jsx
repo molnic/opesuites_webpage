@@ -5,7 +5,7 @@ import LocationModal from './LocationModal';
 const locationDetails = {
     calle100: {
         id: 'calle100',
-        tag: 'Distrito de Negocios',
+        tag: 'Zona Empresarial',
         title: 'Calle 100',
         description: 'El epicentro de los negocios en Bogotá. Av. Calle 100 # 23-44. Conectividad total y diseño sobrio ideal para ejecutivos exigentes.',
         images: [
@@ -17,8 +17,8 @@ const locationDetails = {
         amenities: [
             { icon: 'Dumbbell', label: 'Gym', description: 'Alto Rendimiento - 24/7' },
             { icon: 'Laptop', label: 'Coworking Space', description: 'Productividad Total' },
-            { icon: 'Car', label: 'Parqueadero Privado', description: 'Seguridad y Comodidad' },
-            { icon: 'Wifi', label: 'Wi-Fi Directo', description: 'Alta Velocidad para Negocios' }
+            { icon: 'Car', label: 'Parqueadero con convenio', description: 'Seguridad y Comodidad' },
+            { icon: 'Wifi', label: 'WIFI', description: 'Alta velocidad' }
         ],
         neighborhood: 'Viviendo el Barrio: Estarás a un paso del vibrante Parque 93 y el corredor corporativo más importante de la ciudad. Ideal para cerrar ese trato por la mañana y disfrutar de la mejor coctelería por la noche.'
     },
@@ -95,7 +95,7 @@ const BentoGrid = () => {
 
                         <div className="relative z-10 h-full flex flex-col justify-between">
                             <span className="text-xs uppercase tracking-[0.15em] bg-white/95 text-zinc-900 py-2 px-4 self-start border border-gray-200 shadow-sm font-semibold">
-                                Distrito de Negocios
+                                Zona Empresarial
                             </span>
                             <div className="mt-auto group-hover:text-white transition-colors duration-300 text-white">
                                 <h3 className="font-serif text-[2.5rem] mb-2 drop-shadow-md">Calle 100</h3>
