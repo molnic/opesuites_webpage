@@ -48,7 +48,7 @@ const Navigation = () => {
 
                 <div className="reveal-on-scroll visible">
                     <a
-                        href="https://reservas.molnic.com/"
+                        href="https://hotels.cloudbeds.com/en/reservation/OBvFrZ?currency=cop"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-block py-3 px-6 bg-accent text-white font-sans uppercase tracking-[0.1em] text-xs font-bold cursor-pointer interactive transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(212,175,55,0.4)]"
