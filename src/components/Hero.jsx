@@ -5,7 +5,7 @@ const Hero = () => {
         <header className="h-screen flex items-center relative overflow-hidden group">
             {/* Background Image with Scale effect on hover */}
             <div
-                className="absolute top-0 left-0 w-full h-full bg-[url('https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=2580&auto=format&fit=crop')] bg-no-repeat bg-center bg-cover opacity-30 scale-110 transition-transform duration-[10s] ease-in-out group-hover:scale-100 -z-10"
+                className="absolute top-0 left-0 w-full h-full bg-[url('/images/hero/portada.webp')] bg-no-repeat bg-center bg-cover opacity-30 scale-110 transition-transform duration-[10s] ease-in-out group-hover:scale-100 -z-10"
             />
 
             <div className="container max-w-[1400px] mx-auto px-8">

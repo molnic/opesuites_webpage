@@ -5,7 +5,7 @@ import Narrative from './components/Narrative';
 import Servicios from './components/Amenities'; // Renamed conceptually, file remains Amenities.jsx for now
 import BentoGrid from './components/BentoGrid';
 import UbicacionPremium from './components/UbicacionPremium';
-import GaleriaEstiloVida from './components/GaleriaEstiloVida';
+
 import HistoriasHuespedes from './components/HistoriasHuespedes';
 import PreguntasFrecuentes from './components/PreguntasFrecuentes';
 import { CTA, Footer } from './components/FooterAndCTA';
@@ -25,7 +25,7 @@ function App() {
         <Servicios />
         <BentoGrid />
         <UbicacionPremium />
-        <GaleriaEstiloVida />
+
         <HistoriasHuespedes />
         <PreguntasFrecuentes />
         <CTA />

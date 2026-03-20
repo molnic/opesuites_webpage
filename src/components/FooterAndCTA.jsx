@@ -76,12 +76,7 @@ export const CTA = () => {
                             >
                                 <span className="mr-2"><WhatsAppIcon /></span> Hablar por WhatsApp
                             </a>
-                            <a
-                                href="mailto:reservas@opesuites.com"
-                                className="inline-flex items-center mt-8 py-4 px-12 bg-transparent border border-gray-300 text-zinc-800 font-sans uppercase tracking-[0.1em] text-sm cursor-pointer interactive transition-all duration-400 ease-out-custom hover:bg-zinc-800 hover:text-white hover:border-zinc-800"
-                            >
-                                Enviar Email
-                            </a>
+
                         </div>
                     </div>
                 </div>

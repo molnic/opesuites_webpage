@@ -1,0 +1,29 @@
+{
+  "redirects": [
+    { "source": "/suites", "destination": "/#suites", "permanent": true },
+    { "source": "/calle-100", "destination": "/#suites", "permanent": true },
+    { "source": "/calle-119", "destination": "/#suites", "permanent": true },
+    { "source": "/suite-star", "destination": "/#suites", "permanent": true },
+    { "source": "/suite-standard", "destination": "/#suites", "permanent": true },
+    { "source": "/suite-deluxe", "destination": "/#suites", "permanent": true },
+    { "source": "/suite-tierra", "destination": "/#suites", "permanent": true },
+    { "source": "/suite-top", "destination": "/#suites", "permanent": true },
+    { "source": "/suite-arena", "destination": "/#suites", "permanent": true },
+    { "source": "/suite-cielo", "destination": "/#suites", "permanent": true },
+    { "source": "/habitacion-ejecutiva", "destination": "/#suites", "permanent": true },
+    { "source": "/category/calle-100", "destination": "/#suites", "permanent": true },
+    { "source": "/about-us", "destination": "/#experiencia", "permanent": true },
+    { "source": "/contact-us", "destination": "/#contacto", "permanent": true },
+    { "source": "/spa-2", "destination": "/#experiencia", "permanent": true },
+    { "source": "/blog", "destination": "/", "permanent": true },
+    { "source": "/shop", "destination": "/", "permanent": true },
+    { "source": "/tienda", "destination": "/", "permanent": true },
+    { "source": "/cart", "destination": "/", "permanent": true },
+    { "source": "/carrito", "destination": "/", "permanent": true },
+    { "source": "/checkout", "destination": "/", "permanent": true },
+    { "source": "/finalizar-compra", "destination": "/", "permanent": true },
+    { "source": "/my-account", "destination": "/", "permanent": true },
+    { "source": "/mi-cuenta", "destination": "/", "permanent": true },
+    { "source": "/(.*)", "destination": "/", "permanent": true }
+  ]
+}

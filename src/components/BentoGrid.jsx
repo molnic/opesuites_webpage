@@ -9,9 +9,9 @@ const locationDetails = {
         title: 'Calle 100',
         description: 'El epicentro de los negocios en Bogotá. Av. Calle 100 # 23-44. Conectividad total y diseño sobrio ideal para ejecutivos exigentes.',
         images: [
-            'https://images.unsplash.com/photo-1554995207-c18c203602cb?q=80&w=2670&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=2000&auto=format&fit=crop', // Luxury apt view
-            'https://images.unsplash.com/photo-1593642632823-8f785ba67e45?q=80&w=2000&auto=format&fit=crop', // Home office desk
+            '/images/calle-100/slider/slider-1.webp',
+            '/images/calle-100/slider/slider-2.webp',
+            '/images/calle-100/slider/slider-3.webp',
         ],
         bookingLink: 'https://reservas.molnic.com/?sede=calle-100',
         amenities: [
@@ -28,9 +28,9 @@ const locationDetails = {
         title: 'Usaquén',
         description: 'Cra 5 # 119-11. Gastronomía, cultura y calles empedradas a pasos de tu suite. Un oasis de calma en la efervescencia del norte.',
         images: [
-            'https://images.unsplash.com/photo-1505691723518-36a5ac3be353?q=80&w=2670&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=2000&auto=format&fit=crop', // Dining
-            'https://images.unsplash.com/photo-1542314831-c6a4d14d2303?q=80&w=2000&auto=format&fit=crop', // Premium bedroom
+            '/images/usaquen/slider/slider-1.webp',
+            '/images/usaquen/slider/slider-2.webp',
+            '/images/usaquen/slider/slider-3.webp',
         ],
         bookingLink: 'https://reservas.molnic.com/?sede=usaquen',
         amenities: [
@@ -86,7 +86,7 @@ const BentoGrid = () => {
                         className="lg:col-span-7 min-h-[500px] bg-white border border-gray-200 shadow-md hover:shadow-lg p-8 flex flex-col justify-between transition-all duration-400 ease-out-custom relative overflow-hidden group hover:border-accent hover:-translate-y-1 interactive reveal-on-scroll text-left w-full h-full cursor-pointer"
                     >
                         <img
-                            src="https://images.unsplash.com/photo-1554995207-c18c203602cb?q=80&w=2670&auto=format&fit=crop"
+                            src="/images/calle-100/portada.webp"
                             className="absolute top-0 left-0 w-full h-full object-cover opacity-[0.80] transition-all duration-400 ease-in z-0 grayscale-[80%] group-hover:opacity-100 group-hover:scale-105 group-hover:grayscale-0"
                             alt="Calle 100"
                         />
@@ -113,7 +113,7 @@ const BentoGrid = () => {
                         style={{ transitionDelay: '0.1s' }}
                     >
                         <img
-                            src="https://images.unsplash.com/photo-1505691723518-36a5ac3be353?q=80&w=2670&auto=format&fit=crop"
+                            src="/images/usaquen/portada.webp"
                             className="absolute top-0 left-0 w-full h-full object-cover opacity-[0.80] transition-all duration-400 ease-in z-0 grayscale-[80%] group-hover:opacity-100 group-hover:scale-105 group-hover:grayscale-0"
                             alt="Usaquén"
                         />
@@ -167,7 +167,7 @@ const BentoGrid = () => {
                             <Building2 className="text-accent mb-6 w-10 h-10" />
                             <h4 className="text-[1.35rem] font-serif font-semibold mb-3 text-zinc-900">Vistas de la Ciudad</h4>
                             <p className="text-zinc-600 text-[1rem] leading-relaxed">
-                                Grandes ventanales de piso a techo que integran el paisaje verde y urbano de Bogotá a tu espacio.
+                                Espacios con excelente iluminación natural y vistas despejadas para disfrutar de la energía de Bogotá desde la comodidad de tu habitación.
                             </p>
                         </div>
                     </div>

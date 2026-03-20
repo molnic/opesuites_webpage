@@ -27,7 +27,7 @@ const Narrative = () => {
     return (
         <section className="py-40 bg-bg-deep" id="experiencia" ref={narrativeRef}>
             <div className="container max-w-[1400px] mx-auto px-8">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-16 items-center">
 
                     {/* Text Content */}
                     <div className="reveal-on-scroll">
@@ -61,7 +61,7 @@ const Narrative = () => {
                     {/* Image */}
                     <div className="reveal-on-scroll">
                         <img
-                            src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?q=80&w=2070&auto=format&fit=crop"
+                            src="/images/calle-100/experiencia_suite.webp"
                             alt="Interior de lujo Ope Suites"
                             className="w-full border border-border grayscale-[20%]"
                         />
