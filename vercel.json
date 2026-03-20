@@ -23,7 +23,6 @@
     { "source": "/checkout", "destination": "/", "permanent": true },
     { "source": "/finalizar-compra", "destination": "/", "permanent": true },
     { "source": "/my-account", "destination": "/", "permanent": true },
-    { "source": "/mi-cuenta", "destination": "/", "permanent": true },
-    { "source": "/(.*)", "destination": "/", "permanent": true }
+    { "source": "/mi-cuenta", "destination": "/", "permanent": true }
   ]
 }
