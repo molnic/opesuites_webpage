@@ -17,6 +17,14 @@ const faqs = [
     {
         question: "¿Hay parqueadero disponible?",
         answer: "Contamos con parqueadero con convenio y seguridad 24/7 en nuestra sede Calle 100."
+    },
+    {
+        question: "¿Cuáles son las políticas de reserva y cancelación?",
+        answer: [
+            "Las reservas podrán ser canceladas o modificadas sin costo hasta 42 horas antes de la hora del check-in. Después de este plazo, podrán aplicarse cargos sobre el anticipo. Las modificaciones estarán sujetas a disponibilidad.",
+            "Política de No Show (no presentación): En caso de no presentarse o no hacer uso de la reserva sin previo aviso dentro del tiempo establecido, Ope Suites podrá retener el anticipo recibido.",
+            "Al confirmar la reserva, el huésped acepta estas condiciones."
+        ]
     }
 ];
 
@@ -71,10 +79,14 @@ const PreguntasFrecuentes = () => {
                             </button>
 
                             <div
-                                className={`transition-all duration-500 ease-in-out overflow-hidden ${openIndex === idx ? 'max-h-[200px] opacity-100' : 'max-h-0 opacity-0'}`}
+                                className={`transition-all duration-500 ease-in-out overflow-hidden ${openIndex === idx ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'}`}
                             >
                                 <div className="p-6 pt-0 text-zinc-600 font-medium">
-                                    {faq.answer}
+                                    {Array.isArray(faq.answer)
+                                        ? faq.answer.map((p, i) => (
+                                            <p key={i} className={i > 0 ? 'mt-3' : ''}>{p}</p>
+                                        ))
+                                        : faq.answer}
                                 </div>
                             </div>
                         </div>
