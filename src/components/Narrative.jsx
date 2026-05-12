@@ -64,6 +64,8 @@ const Narrative = () => {
                             src="/images/calle-100/experiencia_suite.webp"
                             alt="Interior de lujo Ope Suites"
                             className="w-full border border-border grayscale-[20%]"
+                            loading="lazy"
+                            decoding="async"
                         />
                     </div>
 

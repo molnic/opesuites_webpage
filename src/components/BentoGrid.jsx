@@ -89,6 +89,8 @@ const BentoGrid = () => {
                             src="/images/calle-100/portada.webp"
                             className="absolute top-0 left-0 w-full h-full object-cover opacity-[0.80] transition-all duration-400 ease-in z-0 grayscale-[80%] group-hover:opacity-100 group-hover:scale-105 group-hover:grayscale-0"
                             alt="Calle 100"
+                            loading="lazy"
+                            decoding="async"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                         <div className="absolute inset-x-0 bottom-0 h-[60%] bg-gradient-to-t from-black/70 to-transparent pointer-events-none z-0" />
@@ -116,6 +118,8 @@ const BentoGrid = () => {
                             src="/images/usaquen/portada.webp"
                             className="absolute top-0 left-0 w-full h-full object-cover opacity-[0.80] transition-all duration-400 ease-in z-0 grayscale-[80%] group-hover:opacity-100 group-hover:scale-105 group-hover:grayscale-0"
                             alt="Usaquén"
+                            loading="lazy"
+                            decoding="async"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                         <div className="absolute inset-x-0 bottom-0 h-[60%] bg-gradient-to-t from-black/70 to-transparent pointer-events-none z-0" />

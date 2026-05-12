@@ -65,6 +65,8 @@ const LocationModal = ({ isOpen, onClose, locationData }) => {
                                     src={imgUrl}
                                     alt={`${locationData.title} vista ${idx + 1}`}
                                     className="w-full h-full object-cover"
+                                    loading="lazy"
+                                    decoding="async"
                                 />
                                 {/* Bottom overlay gradient for readable text overlapping */}
                                 <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-zinc-50 to-transparent opacity-90" />
