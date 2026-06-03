@@ -13,7 +13,7 @@ const locationDetails = {
             '/images/calle-100/slider/slider-2.webp',
             '/images/calle-100/slider/slider-3.webp',
         ],
-        bookingLink: 'https://hotels.cloudbeds.com/en/reservation/OBvFrZ?currency=cop',
+        bookingLink: 'https://reservas.opesuites.com/?sede=calle-100',
         amenities: [
             { icon: 'Dumbbell', label: 'Gym', description: 'Alto Rendimiento - 24/7' },
             { icon: 'Laptop', label: 'Coworking Space', description: 'Productividad Total' },
@@ -32,7 +32,7 @@ const locationDetails = {
             '/images/usaquen/slider/slider-2.webp',
             '/images/usaquen/slider/slider-3.webp',
         ],
-        bookingLink: 'https://hotels.cloudbeds.com/es/reservation/HFSjpR?currency=cop',
+        bookingLink: 'https://reservas.opesuites.com/?sede=usaquen',
         amenities: [
             { icon: 'Utensils', label: 'Alta Gastronomía', description: 'A pasos de tu puerta' },
             { icon: 'Landmark', label: 'Arquitectura Colonial', description: 'Encanto y Cultura' },
