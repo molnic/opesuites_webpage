@@ -1,6 +1,7 @@
-import React, { useEffect, useRef } from 'react';
-import { MapPin } from 'lucide-react';
-import { Map, MapMarker, MarkerContent, MarkerPopup, MapControls } from './ui/map';
+import React, { useEffect, useRef, lazy, Suspense } from 'react';
+
+// El mapa (MapLibre) se carga de forma diferida para aligerar el bundle inicial.
+const SedesMap = lazy(() => import('./SedesMap'));
 
 const UbicacionPremium = () => {
     const sectionRef = useRef(null);
@@ -71,50 +72,9 @@ const UbicacionPremium = () => {
 
                     {/* Right Interactive Map */}
                     <div className="reveal-on-scroll relative aspect-square lg:aspect-[4/3] border border-gray-200 bg-white p-1 overflow-hidden shadow-sm">
-                        <Map
-                            center={[-74.045, 4.690]}
-                            zoom={13}
-                            styles={{
-                                light: "https://basemaps.cartocdn.com/gl/positron-gl-style/style.json",
-                                dark: "https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json"
-                            }}
-                        >
-                            <MapControls position="bottom-right" showZoom />
-
-                            {/* Sede Calle 100 */}
-                            <MapMarker longitude={-74.056405} latitude={4.687697}>
-                                <MarkerContent>
-                                    <div className="flex flex-col items-center group cursor-pointer -translate-y-1/2">
-                                        <div className="relative flex justify-center items-center w-8 h-8">
-                                            <div className="absolute inset-0 bg-accent rounded-full opacity-40 animate-ping" />
-                                            <div className="w-6 h-6 bg-accent rounded-full border-2 border-white relative z-10 flex items-center justify-center shadow-md">
-                                                <MapPin size={12} className="text-white" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </MarkerContent>
-                                <MarkerPopup className="bg-white border border-gray-200 px-4 py-2 text-zinc-900 shadow-xl">
-                                    <p className="font-serif text-sm font-medium">Kaza Living - Calle 100</p>
-                                </MarkerPopup>
-                            </MapMarker>
-
-                            {/* Sede Usaquén */}
-                            <MapMarker longitude={-74.029550} latitude={4.695392}>
-                                <MarkerContent>
-                                    <div className="flex flex-col items-center group cursor-pointer -translate-y-1/2">
-                                        <div className="relative flex justify-center items-center w-8 h-8">
-                                            <div className="absolute inset-0 bg-accent rounded-full opacity-40 animate-ping" style={{ animationDelay: '1s' }} />
-                                            <div className="w-6 h-6 bg-accent rounded-full border-2 border-white relative z-10 flex items-center justify-center shadow-md">
-                                                <MapPin size={12} className="text-white" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </MarkerContent>
-                                <MarkerPopup className="bg-white border border-gray-200 px-4 py-2 text-zinc-900 shadow-xl">
-                                    <p className="font-serif text-sm font-medium">Kaza Living - Usaquén</p>
-                                </MarkerPopup>
-                            </MapMarker>
-                        </Map>
+                        <Suspense fallback={<div className="w-full h-full flex items-center justify-center text-zinc-400 text-sm">Cargando mapa…</div>}>
+                            <SedesMap />
+                        </Suspense>
 
                         {/* Decorative Grid overlays */}
                         <div className="absolute bottom-4 left-4 border-l border-b border-gray-300 w-16 h-16 pointer-events-none z-10 block" />
