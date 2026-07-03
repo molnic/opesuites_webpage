@@ -22,7 +22,7 @@ const faqs = [
         question: "¿Cuáles son las políticas de reserva y cancelación?",
         answer: [
             "Las reservas podrán ser canceladas o modificadas sin costo hasta 42 horas antes de la hora del check-in. Después de este plazo, podrán aplicarse cargos sobre el pago. Las modificaciones estarán sujetas a disponibilidad.",
-            "Política de No Show (no presentación): En caso de no presentarse o no hacer uso de la reserva sin previo aviso dentro del tiempo establecido, Ope Suites podrá retener el pago recibido.",
+            "Política de No Show (no presentación): En caso de no presentarse o no hacer uso de la reserva sin previo aviso dentro del tiempo establecido, Kaza Living podrá retener el pago recibido.",
             "Al confirmar la reserva, el huésped acepta estas condiciones."
         ]
     }

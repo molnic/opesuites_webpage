@@ -22,8 +22,8 @@ const Navigation = () => {
             <div className="container max-w-[1400px] mx-auto px-8 flex justify-between items-center">
                 <a href="/" className="reveal-on-scroll visible flex items-center">
                     <img
-                        src="/logo_opesuites_blanco.png"
-                        alt="OPE Suites"
+                        src="/logo-kaza-living-blanco.svg"
+                        alt="Kaza Living"
                         className="h-14 md:h-20 lg:h-32 w-auto object-contain"
                     />
                 </a>

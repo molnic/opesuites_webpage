@@ -92,7 +92,7 @@ export const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-12 mb-16">
 
                     <div>
-                        <h4 className="font-serif text-[1.5rem] font-semibold tracking-[-0.02em] text-zinc-900 mb-6">Ope Suites.</h4>
+                        <h4 className="font-serif text-[1.5rem] font-semibold tracking-[-0.02em] text-zinc-900 mb-6">Kaza Living.</h4>
                         <p className="mb-4">Redefiniendo la hospitalidad en Bogotá.</p>
                         <div className="flex gap-6 text-zinc-400">
                             <a href="https://www.instagram.com/opesuitescol" target="_blank" rel="noreferrer" className="interactive hover:text-accent transition-colors">
@@ -123,7 +123,7 @@ export const Footer = () => {
                 </div>
 
                 <div className="text-center pt-8 border-t border-gray-200 text-[0.85rem]">
-                    &copy; 2024 Ope Suites. Todos los derechos reservados.
+                    &copy; 2024 Kaza Living. Todos los derechos reservados.
                 </div>
             </div>
         </footer>

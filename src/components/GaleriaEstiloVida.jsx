@@ -29,7 +29,7 @@ const GaleriaEstiloVida = () => {
                 <div className="text-center mb-16 reveal-on-scroll">
                     <h2 className="font-serif text-[2.5rem] mb-4 text-zinc-900">El Arte de Habitar</h2>
                     <p className="text-zinc-600 max-w-[600px] mx-auto">
-                        Cada detalle en Ope Suites ha sido curado para inspirar. Espacios que trascienden el alojamiento tradicional para convertirse en una extensión de tu estilo de vida.
+                        Cada detalle en Kaza Living ha sido curado para inspirar. Espacios que trascienden el alojamiento tradicional para convertirse en una extensión de tu estilo de vida.
                     </p>
                 </div>
 

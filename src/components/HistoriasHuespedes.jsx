@@ -43,7 +43,7 @@ const HistoriasHuespedes = () => {
                 <div className="text-center mb-16 reveal-on-scroll">
                     <h2 className="font-serif text-[2.5rem] mb-4 text-zinc-900">Historias de Nuestros Huéspedes</h2>
                     <p className="text-zinc-600 max-w-[600px] mx-auto">
-                        Experiencias reales de quienes han hecho de Ope Suites su refugio.
+                        Experiencias reales de quienes han hecho de Kaza Living su refugio.
                     </p>
                 </div>
 

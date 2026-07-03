@@ -35,7 +35,7 @@ const Narrative = () => {
                             Más que un lugar para quedarte,<br />tu <span className="italic text-accent">Santuario Urbano</span>.
                         </h2>
                         <p className="text-text-muted mb-6 text-lg">
-                            Olvídate de los espacios impersonales. En Ope Suites creemos que la verdadera exclusividad está en la libertad de sentirte en casa.
+                            Olvídate de los espacios impersonales. En Kaza Living creemos que la verdadera exclusividad está en la libertad de sentirte en casa.
                         </p>
                         <p className="text-text-muted mb-6 text-lg">
                             Ya sea por una noche, una estadía corporativa o varios meses, nuestros apartamentos equipados y habitaciones privadas en Calle 100 y Usaquén combinan privacidad, practicidad y seguridad con la comodidad de tu propio espacio.
@@ -62,7 +62,7 @@ const Narrative = () => {
                     <div className="reveal-on-scroll">
                         <img
                             src="/images/calle-100/experiencia_suite.webp"
-                            alt="Interior de lujo Ope Suites"
+                            alt="Interior de lujo Kaza Living"
                             className="w-full border border-border grayscale-[20%]"
                             loading="lazy"
                             decoding="async"

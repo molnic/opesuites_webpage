@@ -44,7 +44,7 @@ const UbicacionPremium = () => {
                             <span className="italic text-accent">Vida Cosmopolita</span>
                         </h2>
                         <p className="text-zinc-600 text-lg mb-6 max-w-[500px]">
-                            Posicionados estratégicamente entre la elegancia del Parque 93 y el encanto colonial de Usaquén. Ope Suites te ofrece acceso inmediato a la vibrante escena gastronómica, cultural y de negocios de Bogotá.
+                            Posicionados estratégicamente entre la elegancia del Parque 93 y el encanto colonial de Usaquén. Kaza Living te ofrece acceso inmediato a la vibrante escena gastronómica, cultural y de negocios de Bogotá.
                         </p>
                         <p className="text-zinc-600 text-lg mb-8 max-w-[500px]">
                             No necesitas alejarte para vivir la ciudad. Todo lo que importa está a unos pasos de tu refugio privado.
@@ -94,7 +94,7 @@ const UbicacionPremium = () => {
                                     </div>
                                 </MarkerContent>
                                 <MarkerPopup className="bg-white border border-gray-200 px-4 py-2 text-zinc-900 shadow-xl">
-                                    <p className="font-serif text-sm font-medium">OPE Suites - Calle 100</p>
+                                    <p className="font-serif text-sm font-medium">Kaza Living - Calle 100</p>
                                 </MarkerPopup>
                             </MapMarker>
 
@@ -111,7 +111,7 @@ const UbicacionPremium = () => {
                                     </div>
                                 </MarkerContent>
                                 <MarkerPopup className="bg-white border border-gray-200 px-4 py-2 text-zinc-900 shadow-xl">
-                                    <p className="font-serif text-sm font-medium">OPE Suites - Usaquén</p>
+                                    <p className="font-serif text-sm font-medium">Kaza Living - Usaquén</p>
                                 </MarkerPopup>
                             </MapMarker>
                         </Map>
