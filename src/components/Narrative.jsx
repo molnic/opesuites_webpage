@@ -64,6 +64,8 @@ const Narrative = () => {
                             src="/images/calle-100/experiencia_suite.webp"
                             alt="Interior de lujo Kaza Living"
                             className="w-full border border-border grayscale-[20%]"
+                            width="1600"
+                            height="2400"
                             loading="lazy"
                             decoding="async"
                         />
