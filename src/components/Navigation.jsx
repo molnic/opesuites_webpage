@@ -24,7 +24,7 @@ const Navigation = () => {
                     <img
                         src="/logo-kaza-living-blanco.svg"
                         alt="Kaza Living"
-                        className="h-14 md:h-20 lg:h-32 w-auto object-contain"
+                        className="h-14 md:h-20 lg:h-32 w-auto object-contain drop-shadow-[0_2px_12px_rgba(0,0,0,0.7)]"
                     />
                 </a>
 
