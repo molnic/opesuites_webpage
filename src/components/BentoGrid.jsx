@@ -73,7 +73,7 @@ const BentoGrid = () => {
             <div className="container max-w-[1400px] mx-auto px-8">
 
                 <div className="mb-16 flex justify-between items-end reveal-on-scroll">
-                    <h2 className="font-serif text-[2.5rem] text-zinc-900">Nuestras Sedes</h2>
+                    <h2 className="font-logo text-[2.5rem] text-zinc-900">Nuestras Sedes</h2>
                     <p className="text-accent italic">Diseñado para la vida moderna</p>
                 </div>
 
@@ -100,7 +100,7 @@ const BentoGrid = () => {
                                 Zona Empresarial
                             </span>
                             <div className="mt-auto group-hover:text-white transition-colors duration-300 text-white">
-                                <h3 className="font-serif text-[2.5rem] mb-2 drop-shadow-md">Calle 100</h3>
+                                <h3 className="font-logo text-[2.5rem] mb-2 drop-shadow-md">Calle 100</h3>
                                 <p className="text-[1.05rem] max-w-[85%] font-medium text-zinc-200 group-hover:text-zinc-100 drop-shadow-md">
                                     El epicentro de los negocios en Bogotá. Av. Calle 100 # 23-44. Conectividad total y diseño sobrio.
                                 </p>
@@ -129,7 +129,7 @@ const BentoGrid = () => {
                                 Vida y Cultura
                             </span>
                             <div className="mt-auto group-hover:text-white transition-colors duration-300 text-white">
-                                <h3 className="font-serif text-[2.5rem] mb-2 drop-shadow-md">Usaquén</h3>
+                                <h3 className="font-logo text-[2.5rem] mb-2 drop-shadow-md">Usaquén</h3>
                                 <p className="text-[1.05rem] max-w-[85%] font-medium text-zinc-200 group-hover:text-zinc-100 drop-shadow-md">
                                     Cra 5 # 119-11. Gastronomía, cultura y calles empedradas a pasos de tu suite.
                                 </p>
@@ -141,7 +141,7 @@ const BentoGrid = () => {
                     <div className="lg:col-span-4 bg-white shadow-md border border-gray-200 p-8 flex flex-col justify-between transition-all duration-400 ease-out-custom relative overflow-hidden group hover:border-accent hover:-translate-y-1 hover:shadow-lg reveal-on-scroll">
                         <div className="relative z-10 h-full flex flex-col justify-center items-start text-left">
                             <Clock className="text-accent mb-6 w-10 h-10" />
-                            <h4 className="text-[1.35rem] font-serif font-semibold mb-3 text-zinc-900">Estadías Largas</h4>
+                            <h4 className="text-[1.35rem] font-logo font-semibold mb-3 text-zinc-900">Estadías Largas</h4>
                             <p className="text-zinc-600 text-[1rem] leading-relaxed">
                                 Tarifas preferenciales para estancias mensuales. Siéntete en casa, por más tiempo.
                             </p>
@@ -155,7 +155,7 @@ const BentoGrid = () => {
                     >
                         <div className="relative z-10 h-full flex flex-col justify-center items-start text-left">
                             <ShieldCheck className="text-accent mb-6 w-10 h-10" />
-                            <h4 className="text-[1.35rem] font-serif font-semibold mb-3 text-zinc-900">Seguridad 24/7</h4>
+                            <h4 className="text-[1.35rem] font-logo font-semibold mb-3 text-zinc-900">Seguridad 24/7</h4>
                             <p className="text-zinc-600 text-[1rem] leading-relaxed">
                                 Monitoreo constante y acceso controlado para tu tranquilidad total en nuestra recepción privada.
                             </p>
@@ -169,7 +169,7 @@ const BentoGrid = () => {
                     >
                         <div className="relative z-10 h-full flex flex-col justify-center items-start text-left">
                             <Building2 className="text-accent mb-6 w-10 h-10" />
-                            <h4 className="text-[1.35rem] font-serif font-semibold mb-3 text-zinc-900">Vistas de la Ciudad</h4>
+                            <h4 className="text-[1.35rem] font-logo font-semibold mb-3 text-zinc-900">Vistas de la Ciudad</h4>
                             <p className="text-zinc-600 text-[1rem] leading-relaxed">
                                 Espacios con excelente iluminación natural y vistas despejadas para disfrutar de la energía de Bogotá desde la comodidad de tu habitación.
                             </p>

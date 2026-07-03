@@ -31,8 +31,8 @@ const Narrative = () => {
 
                     {/* Text Content */}
                     <div className="reveal-on-scroll">
-                        <h2 className="font-serif text-5xl mb-8">
-                            Más que un lugar para quedarte,<br />tu <span className="italic text-accent">Santuario Urbano</span>.
+                        <h2 className="font-logo text-5xl mb-8">
+                            Más que un lugar para quedarte,<br />tu <span className="text-accent">Santuario Urbano</span>.
                         </h2>
                         <p className="text-text-muted mb-6 text-lg">
                             Olvídate de los espacios impersonales. En Kaza Living creemos que la verdadera exclusividad está en la libertad de sentirte en casa.
@@ -44,15 +44,15 @@ const Narrative = () => {
                         {/* Stats */}
                         <div className="flex gap-12 mt-12 border-t border-border pt-8">
                             <div>
-                                <h3 className="text-4xl text-accent font-serif mb-2">5.0</h3>
+                                <h3 className="text-4xl text-accent font-logo mb-2">5.0</h3>
                                 <span className="text-xs uppercase tracking-[0.1em] text-text-muted">Estrellas en TripAdvisor</span>
                             </div>
                             <div>
-                                <h3 className="text-4xl text-accent font-serif mb-2">2</h3>
+                                <h3 className="text-4xl text-accent font-logo mb-2">2</h3>
                                 <span className="text-xs uppercase tracking-[0.1em] text-text-muted">Ubicaciones Prime</span>
                             </div>
                             <div>
-                                <h3 className="text-4xl text-accent font-serif mb-2">∞</h3>
+                                <h3 className="text-4xl text-accent font-logo mb-2">∞</h3>
                                 <span className="text-xs uppercase tracking-[0.1em] text-text-muted">Privacidad</span>
                             </div>
                         </div>

@@ -28,7 +28,7 @@ const SedesMap = () => (
                 </div>
             </MarkerContent>
             <MarkerPopup className="bg-white border border-gray-200 px-4 py-2 text-zinc-900 shadow-xl">
-                <p className="font-serif text-sm font-medium">Kaza Living - Calle 100</p>
+                <p className="font-logo text-sm font-medium">Kaza Living - Calle 100</p>
             </MarkerPopup>
         </MapMarker>
 
@@ -45,7 +45,7 @@ const SedesMap = () => (
                 </div>
             </MarkerContent>
             <MarkerPopup className="bg-white border border-gray-200 px-4 py-2 text-zinc-900 shadow-xl">
-                <p className="font-serif text-sm font-medium">Kaza Living - Usaquén</p>
+                <p className="font-logo text-sm font-medium">Kaza Living - Usaquén</p>
             </MarkerPopup>
         </MapMarker>
     </Map>

@@ -40,9 +40,9 @@ const UbicacionPremium = () => {
 
                     {/* Left Text Content */}
                     <div className="reveal-on-scroll relative z-10">
-                        <h2 className="font-serif text-[3rem] mb-6 leading-tight text-zinc-900">
+                        <h2 className="font-logo text-[3rem] mb-6 leading-tight text-zinc-900">
                             En el epicentro de la <br />
-                            <span className="italic text-accent">Vida Cosmopolita</span>
+                            <span className="text-accent">Vida Cosmopolita</span>
                         </h2>
                         <p className="text-zinc-600 text-lg mb-6 max-w-[500px]">
                             Posicionados estratégicamente entre la elegancia del Parque 93 y el encanto colonial de Usaquén. Kaza Living te ofrece acceso inmediato a la vibrante escena gastronómica, cultural y de negocios de Bogotá.

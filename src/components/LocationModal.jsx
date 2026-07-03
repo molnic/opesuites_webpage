@@ -81,7 +81,7 @@ const LocationModal = ({ isOpen, onClose, locationData }) => {
                             <span className="text-xs uppercase tracking-[0.2em] text-accent mb-3 block font-bold">
                                 {locationData.tag}
                             </span>
-                            <h2 className="font-serif text-4xl sm:text-5xl text-zinc-900 mb-6 leading-tight">
+                            <h2 className="font-logo text-4xl sm:text-5xl text-zinc-900 mb-6 leading-tight">
                                 {locationData.title}
                             </h2>
                             <p className="text-zinc-600 leading-relaxed text-lg font-medium">

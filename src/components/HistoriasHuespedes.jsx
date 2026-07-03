@@ -41,7 +41,7 @@ const HistoriasHuespedes = () => {
         <section className="py-24 bg-white border-t border-gray-200" ref={sectionRef}>
             <div className="container max-w-[1400px] mx-auto px-8">
                 <div className="text-center mb-16 reveal-on-scroll">
-                    <h2 className="font-serif text-[2.5rem] mb-4 text-zinc-900">Historias de Nuestros Huéspedes</h2>
+                    <h2 className="font-logo text-[2.5rem] mb-4 text-zinc-900">Historias de Nuestros Huéspedes</h2>
                     <p className="text-zinc-600 max-w-[600px] mx-auto">
                         Experiencias reales de quienes han hecho de Kaza Living su refugio.
                     </p>

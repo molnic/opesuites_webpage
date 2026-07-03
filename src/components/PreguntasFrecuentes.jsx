@@ -57,7 +57,7 @@ const PreguntasFrecuentes = () => {
             <div className="container max-w-[800px] mx-auto px-8">
 
                 <div className="text-center mb-16 reveal-on-scroll">
-                    <h2 className="font-serif text-[2.5rem] mb-4 text-zinc-900">Detalles que Importan</h2>
+                    <h2 className="font-logo text-[2.5rem] mb-4 text-zinc-900">Detalles que Importan</h2>
                     <p className="text-zinc-600">Todo lo que necesitas saber antes de tu llegada.</p>
                 </div>
 

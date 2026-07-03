@@ -62,7 +62,7 @@ export const CTA = () => {
                     <div className="absolute inset-0 border-t-[3px] border-accent opacity-60 pointer-events-none" />
 
                     <div className="relative z-10">
-                        <h2 className="font-serif text-[2.5rem] mb-4 text-zinc-900">¿Planeando una estancia larga?</h2>
+                        <h2 className="font-logo text-[2.5rem] mb-4 text-zinc-900">¿Planeando una estancia larga?</h2>
                         <p className="text-zinc-600 max-w-[600px] mx-auto mb-8 font-medium">
                             Ofrecemos tarifas corporativas y descuentos exclusivos para nómadas digitales y ejecutivos en estancias superiores a 30 días.
                         </p>
@@ -92,7 +92,7 @@ export const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-12 mb-16">
 
                     <div>
-                        <h4 className="font-serif text-[1.5rem] font-semibold tracking-[-0.02em] text-zinc-900 mb-6">Kaza Living.</h4>
+                        <h4 className="font-logo text-[1.5rem] font-semibold tracking-[-0.02em] text-zinc-900 mb-6">Kaza Living.</h4>
                         <p className="mb-4">Redefiniendo la hospitalidad en Bogotá.</p>
                         <div className="flex gap-6 text-zinc-400">
                             <a href="https://www.instagram.com/kazalivingbog" target="_blank" rel="noreferrer" className="interactive hover:text-accent transition-colors">
@@ -105,7 +105,7 @@ export const Footer = () => {
                     </div>
 
                     <div>
-                        <h4 className="text-zinc-900 mb-6 font-serif text-[1.2rem]">Ubicaciones</h4>
+                        <h4 className="text-zinc-900 mb-6 font-logo text-[1.2rem]">Ubicaciones</h4>
                         <ul className="list-none p-0 flex flex-col gap-3">
                             <li><a href="https://goo.gl/maps/BzXyonDDW6oYJv9w7" target="_blank" rel="noreferrer" className="interactive hover:text-accent transition-colors">Sede Calle 100</a></li>
                             <li><a href="https://goo.gl/maps/UcyNHouBZQx9xDFs6" target="_blank" rel="noreferrer" className="interactive hover:text-accent transition-colors">Sede Usaquén</a></li>
@@ -113,7 +113,7 @@ export const Footer = () => {
                     </div>
 
                     <div>
-                        <h4 className="text-zinc-900 mb-6 font-serif text-[1.2rem]">Contacto</h4>
+                        <h4 className="text-zinc-900 mb-6 font-logo text-[1.2rem]">Contacto</h4>
                         <ul className="list-none p-0 flex flex-col gap-3">
                             <li>+57 310 273 5824</li>
                             <li>reservas@kazalivingbog.com</li>
