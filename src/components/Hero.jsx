@@ -25,7 +25,7 @@ const Hero = () => {
 
                     <div className="reveal-on-scroll visible" style={{ transitionDelay: '0.3s' }}>
                         <a
-                            href="https://reservas.opesuites.com/?sede=calle-100"
+                            href="https://reservas.kazalivingbog.com/?sede=calle-100"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-block py-4 px-10 bg-accent text-white font-sans uppercase tracking-[0.1em] font-bold transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(212,175,55,0.4)]"
