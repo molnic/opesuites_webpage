@@ -95,10 +95,10 @@ export const Footer = () => {
                         <h4 className="font-serif text-[1.5rem] font-semibold tracking-[-0.02em] text-zinc-900 mb-6">Kaza Living.</h4>
                         <p className="mb-4">Redefiniendo la hospitalidad en Bogotá.</p>
                         <div className="flex gap-6 text-zinc-400">
-                            <a href="https://www.instagram.com/opesuitescol" target="_blank" rel="noreferrer" className="interactive hover:text-accent transition-colors">
+                            <a href="https://www.instagram.com/kazalivingbog" target="_blank" rel="noreferrer" className="interactive hover:text-accent transition-colors">
                                 <Instagram size={20} />
                             </a>
-                            <a href="https://www.tiktok.com/@ope.suites" target="_blank" rel="noreferrer" className="interactive hover:text-accent transition-colors">
+                            <a href="https://www.tiktok.com/@kazalivingbog" target="_blank" rel="noreferrer" className="interactive hover:text-accent transition-colors">
                                 <TikTokIcon />
                             </a>
                         </div>
@@ -116,7 +116,7 @@ export const Footer = () => {
                         <h4 className="text-zinc-900 mb-6 font-serif text-[1.2rem]">Contacto</h4>
                         <ul className="list-none p-0 flex flex-col gap-3">
                             <li>+57 310 273 5824</li>
-                            <li>reservas@opesuites.com</li>
+                            <li>reservas@kazalivingbog.com</li>
                         </ul>
                     </div>
 
