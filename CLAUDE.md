@@ -1,6 +1,8 @@
-# OPE Suites — Webpage
+# Kaza Living — Webpage
 
-Public marketing landing page for OPE Suites (furnished apartments / hotel in Bogotá, Colombia). Two locations: **Calle 100** and **Usaquén**. Single-page site that showcases the brand and drives visitors to the booking platform. Booking itself happens on the separate **reservas** project (`reservas.opesuites.com`).
+Public marketing landing page for **Kaza Living** (furnished apartments / hotel in Bogotá, Colombia). Two locations: **Calle 100** and **Usaquén**. Single-page site that showcases the brand and drives visitors to the booking platform. Booking itself happens on the separate **reservas** project (`reservas.kazalivingbog.com`).
+
+> The repo folder is still named `ope-suites/webpage` — the project was rebranded from **OPE Suites** to **Kaza Living**, but the directory was kept as-is. A few legacy references may remain (e.g. `public/logo_opesuites_blanco.png`, now unused).
 
 ## Stack
 
@@ -23,13 +25,15 @@ npm run preview  # Preview production build
 ## Architecture
 
 Single-page app — no router. [App.jsx](src/App.jsx) renders all sections in order:
-`Navigation → Hero → Narrative → Amenities → BentoGrid → UbicacionPremium → HistoriasHuespedes → PreguntasFrecuentes → CTA → Footer → WhatsAppButton`.
+`Navigation → Hero → Narrative → Servicios → BentoGrid → UbicacionPremium → HistoriasHuespedes → PreguntasFrecuentes → CTA → Footer → WhatsAppButton`.
 
-Note: `Amenities.jsx` is imported as `Servicios` in App.jsx (renamed conceptually, file kept as-is).
+Notes:
+- `Amenities.jsx` is imported as `Servicios` in App.jsx (renamed conceptually, file kept as-is).
+- `CTA` and `Footer` are both exported from [FooterAndCTA.jsx](src/components/FooterAndCTA.jsx) (there is no `CTA.jsx`).
 
 ## Booking links (important)
 
-All "Reservar" / "Ver Disponibilidad" buttons point to the booking platform `https://reservas.opesuites.com/`. The platform reads a `?sede=` query param to pre-activate its location toggle (see `SearchWidget` in the sibling **reservas** project):
+All "Reservar" / "Ver Disponibilidad" buttons point to the booking platform `https://reservas.kazalivingbog.com/`. The platform reads a `?sede=` query param to pre-activate its location toggle (see `SearchWidget` in the sibling **reservas** project):
 
 - `?sede=calle-100` → activates **Calle 100**
 - `?sede=usaquen` → activates **Usaquén**
@@ -47,13 +51,15 @@ When adding a new booking button, always append the matching `?sede=` param so t
 ## Theme
 
 - **Accent gold:** `#d4af37` (Tailwind `accent`)
-- **Fonts:** `serif` = Playfair Display, `sans` = Plus Jakarta Sans
-- Dark, luxury aesthetic with a `noise-overlay` global layer.
+- **Fonts:** `logo` = **Questrial** (brand titles / hero, `font-logo`, matches the Kaza Living logo), `serif` = Playfair Display, `sans` = Plus Jakarta Sans. All loaded from Google Fonts in [index.html](index.html).
+- **Logo:** `public/logo-kaza-living-blanco.svg` (white, used in nav) and `public/logo-kaza-living-color.svg`.
+- Dark, luxury aesthetic with a `noise-overlay` global layer. `theme-color` is `#2A1F14`.
 
-## Integrations
+## Integrations & tracking
 
-- **WhatsApp** — floating button ([WhatsAppButton.jsx](src/components/WhatsAppButton.jsx)) → `wa.me/573102735824` with pre-filled message.
-- **Google Analytics GA4** — `G-BZP0T72GQN`, loaded in [index.html](index.html).
+- **WhatsApp** — floating button ([WhatsAppButton.jsx](src/components/WhatsAppButton.jsx)) → `wa.me/573102735824` with a pre-filled Kaza Living message.
+- **Google Analytics GA4** — `G-BZP0T72GQN`, loaded in [index.html](index.html). Currently **page-view only** — no custom conversion events (e.g. no event on "Reservar" clicks) and no cross-domain linker to `reservas.kazalivingbog.com`.
+- **Meta Pixel** — **not installed.** Meta Ads traffic lands here but there is no pixel, so Meta cannot attribute/optimize conversions or build audiences. (Known gap — conversion instrumentation is a pending improvement.)
 - **MapLibre** — location map in the Ubicación section.
 
 ## Conventions
@@ -74,7 +80,8 @@ src/
   lib/utils.ts        # cn() helper
 public/
   images/             # hero/, calle-100/, usaquen/
-  logo_opesuites_blanco.png
+  logo-kaza-living-blanco.svg
+  logo-kaza-living-color.svg
 ```
 
 ## Git / deploy flow
